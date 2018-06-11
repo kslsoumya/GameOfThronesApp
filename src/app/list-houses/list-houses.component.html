@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row" *ngIf='allData'>
+    <div class="col-md-6 col-lg-4" *ngFor="let book of allData | orderBy: 'name'">
+      <div class="card bg-light border-success  mb-3" style="border-left: rgb(0, 255, 76) 8px solid">
+        <div class="card-header">
+          <h5>{{book.name}}</h5>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Region : </strong>{{book.region}}</p>
+          
+          <p class='text-muted'>Founded on {{book.founded }} </p>
+          <a class="btn btn-outline-success" routerLink="/detail/{{book.url.split('api/')[1]}}">Info</a>
+        </div>
+      </div>
+  
+    </div>
+    </div>
+  

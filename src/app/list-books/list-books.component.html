@@ -1,0 +1,19 @@
+<div class="container">
+<div class="row" *ngIf='allData'>
+  <div class="col-md-6 col-lg-4" *ngFor="let book of allData | orderBy: 'name'">
+    <div class="card bg-light border-danger  mb-3" style="border-left: rgb(255, 0, 98) 8px solid">
+      <div class="card-header">
+        <h5>{{book.name}}</h5>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Publisher : </strong>{{book.publisher}}</p>
+        <p>
+          <strong>Country : </strong>{{book.country}}</p>
+        <p class='text-muted'>Released on {{book.released | date}} </p>
+        <a class="btn btn-outline-danger" routerLink="/detail/{{book.url.split('api/')[1]}}">Info</a>
+      </div>
+    </div>
+
+  </div>
+  </div>

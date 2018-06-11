@@ -1,0 +1,52 @@
+<div class="container" *ngIf = "details" >
+  <div class="row" style="text-align: center">
+    <div class="col-md-12">
+      <div class="card bg-info border-info">
+        <div class="card-header">
+          <h4 *ngIf='details.name !== ""'>{{details.name}}</h4>
+          <h4 *ngIf='details.name == ""'>Name : N/A</h4>
+        </div>
+        <ul class="list-group list-group-flush" style="text-align: center">
+          <li class="list-group-item">
+            <strong>Gender: </strong>{{details.gender}}</li>
+          <li class="list-group-item">
+            <strong>Culture: </strong>{{details.culture}}</li>
+          <li class="list-group-item">
+            <strong>Born: </strong>{{details.born}}</li>
+          <li class="list-group-item">
+            <strong>Died: </strong>{{details.died}}</li>
+          <li class="list-group-item" *ngIf="details.titles.length>0">
+            <strong>Titles: </strong>
+            <span *ngFor="let title of details.titles;let first=first;
+            let last=last">{{title}}{{last ? '' :','}}</span>
+          </li>
+          <li class="list-group-item" *ngIf="details.aliases.length>0">
+            <strong>Aliases: </strong>
+            <span *ngFor="let alias of details.aliases;let first=first;
+                let last=last">{{alias}}{{last ? '' :', '}}</span>
+          </li>
+          <li class="list-group-item">
+            <strong>Father: </strong>{{details.father}}</li>
+          <li class="list-group-item">
+            <strong>Mother: </strong>{{details.mother}}</li>
+          <li class="list-group-item">
+            <strong>Spouse: </strong>{{details.spouse}}</li>
+          <li class="list-group-item">
+            <strong>Allegiances: </strong>{{details.allegiances.length}}</li>
+          <li class="list-group-item">
+            <strong>Books: </strong>{{details.books.length}}</li>
+          <li class="list-group-item">
+            <strong>PovBooks: </strong>{{details.povBooks.length}}</li>
+
+          <li class="list-group-item" *ngIf="details.tvSeries!== undefined && details.tvSeries>0">
+            <strong>TvSeries: </strong>
+            <span *ngFor="let series of details.tvSeries;let first=first;
+                  let last=last">{{series}}{{last ? '' :', '}}</span>
+          </li>
+          <li class="list-group-item">
+            <strong>Played By: </strong>{{details.playedBy}}</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>

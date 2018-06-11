@@ -1,0 +1,38 @@
+<div class="container" *ngIf="details">
+  <div class="row" style="text-align: center">
+    <div class="col-md-12">
+
+      <div class="card bg-success border-success">
+        <div class="card-header">
+          <h4>{{details.name}}</h4>
+        </div>
+        <ul class="list-group list-group-flush" style="text-align: center">
+          <li class="list-group-item">
+            <strong>Region: </strong>{{details.region}}</li>
+          <li class="list-group-item">
+            <strong>CoatOfArms: </strong>{{details.coatOfArms}}</li>
+          <li class="list-group-item">
+            <strong>Words: </strong>{{details.words}}</li>
+          <li class="list-group-item">
+            <strong>CurrentLord: </strong>{{details.CurrentLord}}</li>
+          <li class="list-group-item">
+            <strong>Heir: </strong>{{details.heir}}</li>
+          <li class="list-group-item">
+            <strong>Overlord: </strong>{{details.overlord}}</li>
+          <li class="list-group-item">
+            <strong>titles: </strong>{{details.titles.length}}</li>
+          <li class="list-group-item">
+            <strong>Founded: </strong>{{details.founded}}</li>
+          <li class="list-group-item">
+            <strong>Founder: </strong>{{details.founder}}</li>
+          <li class="list-group-item">
+            <strong>DiedOut: </strong>{{details.diedOut}}</li>
+          <li class="list-group-item">
+            <strong>CadetBranches: </strong>{{details.cadetBranches.length}}</li>
+          <li class="list-group-item">
+            <strong>SwornMembers: </strong>{{details.swornMembers}}</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>

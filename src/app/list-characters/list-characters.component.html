@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row" *ngIf='allData'>
+    <div class="col-md-6 col-lg-4" *ngFor="let character of allData | orderBy: 'aliases[0]'">
+      <div class="card bg-light border-info  mb-3" style="border-left:  aqua 8px solid">
+        <div class="card-header">
+          <h5>{{character.aliases[0]}}</h5>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Gender : </strong>{{character.gender}}</p>
+            <p>
+              <strong>Culture : </strong>{{character.culture}}</p>
+          
+          <a class="btn btn-outline-info" routerLink="/detail/{{character.url.split('api/')[1]}}">Info</a>
+        </div>
+      </div>
+  
+    </div>
+    </div>
+  

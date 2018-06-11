@@ -1,0 +1,23 @@
+
+  <!-- <div class="row" *ngIf= 'allData && optionSelected =="characters"'>
+    <div class="col-md-4" *ngFor = "let character of allData">
+        <div class="card bg-light border-info  mb-3" >
+            <div class="card-header"><h5>{{book.name}}</h5></div>
+            <div class="card-body">
+              <p><strong>Publisher : </strong>{{book.publisher}}</p> 
+              <p><strong>Country : </strong>{{book.country}}</p>
+              <p class='text-muted' >Released on {{book.released | date}} </p>
+              <a  class="btn btn-outline-info" routerLink ="/detail/{{book.url.split('api/')[1]}}">Info</a> -->
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <!-- </div>
+          </div>
+
+    </div>
+  </div> -->
+  <div [ngSwitch]="optionSelected"  >
+    <app-list-books    *ngSwitchCase="'books'"    ></app-list-books>
+<app-list-characters    *ngSwitchCase="'characters'"     ></app-list-characters>
+    <app-list-houses *ngSwitchCase="'houses'" ></app-list-houses>
+    <app-list  *ngSwitchDefault></app-list>
+  </div>
+

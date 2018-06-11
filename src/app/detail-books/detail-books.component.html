@@ -1,0 +1,33 @@
+<div class="container" *ngIf = "details">
+    <div class="row" style="text-align: center">
+      <div class="col-md-12">
+        <div class="card bg-danger border-danger">
+          <div class="card-header">
+            <h4>{{details.name}}</h4>
+          </div>
+          <ul class="list-group list-group-flush" style="text-align: center">
+            <li class="list-group-item">
+              <strong>Author: </strong>{{details.authors}}</li>
+            <li class="list-group-item">
+              <strong>Publisher: </strong>{{details.publisher}}</li>
+            <li class="list-group-item">
+              <strong>ISBN: </strong>{{details.isbn}}</li>
+            <li class="list-group-item">
+              <strong>Country: </strong>{{details.country}}</li>
+            <li class="list-group-item">
+              <strong>Media Type: </strong>{{details.mediaType}}</li>
+            <li class="list-group-item">
+              <strong>Pages: </strong>{{details.numberOfPages}}</li>
+            <li class="list-group-item">
+              <strong>Characters: </strong>{{details.characters.length}}</li>
+            <li class="list-group-item">
+              <strong>Pov Characters: </strong>{{details.povCharacters.length}}</li>
+            <li class="list-group-item">
+              <strong>Release Date: </strong>{{details.released}}</li>
+
+          </ul>
+        </div>
+
+
+      </div>
+    </div>

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row" *ngIf='allData'>
+    <div class="col-md-6 col-lg-4" *ngFor="let item of finData | orderBy: 'name'">
+      <div  *ngIf ="item.url.split('/')[4] =='characters'" class="card bg-light border-info  mb-3" style="border-left: aqua 8px solid">
+        <div class="card-header">
+          <h5>{{item.name}}</h5>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Type : </strong>{{item.url.split('/')[4] }}
+          </p>
+          <p>
+            <a class="btn btn-outline-info" routerLink="/detail/{{item.url.split('api/')[1]}}">Info</a>
+        </div>
+      </div>
+      <div  *ngIf ="item.url.split('/')[4] =='books'" class="card bg-light border-danger  mb-3" style ="border-left: rgb(255, 0, 98) 8px solid">
+        <div class="card-header">
+          <h5>{{item.name}}</h5>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Type : </strong>{{item.url.split('/')[4] }}
+          </p>
+          <p>
+            <a class="btn btn-outline-danger" routerLink="/detail/{{item.url.split('api/')[1]}}">Info</a>
+        </div>
+      </div>
+      <div  *ngIf ="item.url.split('/')[4] =='houses'" class="card bg-light border-success  mb-3" style="border-left: rgb(0, 255, 76) 8px solid">
+        <div class="card-header">
+          <h5>{{item.name}}</h5>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong>Type : </strong>{{item.url.split('/')[4] }}
+          </p>
+          <p>
+            <a class="btn btn-outline-success" routerLink="/detail/{{item.url.split('api/')[1]}}">Info</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
